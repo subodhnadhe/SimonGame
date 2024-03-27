@@ -3,6 +3,21 @@ let gamePattern = [];
 let userClickedPattern = [];
 var started = false;
 let level = 0;
+//to start the game in mobile using start button
+$("#start-btn").click(function() {
+  startGame();
+});
+
+// Function to start the game
+function startGame() {
+  // Reset game variables and UI elements
+  started = true;
+  level = 0;
+  gamePattern = [];
+  userClickedPattern = [];
+  nextSequence();
+}
+
 //to generate sequence
 function nextSequence() {
   userClickedPattern = [];
